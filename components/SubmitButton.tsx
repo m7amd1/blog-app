@@ -6,7 +6,7 @@ const SubmitButton = () => {
   const { pending } = useFormStatus();
 
   return (
-    <Button className="w-fit" type="submit" disabled={pending}>
+    <Button className="w-fit cursor-pointer" type="submit" disabled={pending}>
       {pending ? "Submitting" : "Submit"}
     </Button>
   );

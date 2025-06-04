@@ -24,7 +24,7 @@ const Dashboard = async () => {
   const data = await getData(user.id);
 
   return (
-    <div>
+    <div className="mt-6">
       <div className="flex items-center justify-between mb-4">
         <h2 className="text-xl font-medium">Your Blog Articles</h2>
         <Link className={buttonVariants()} href="/dashboard/create">
