@@ -17,23 +17,23 @@ const Navbar = async () => {
       <div className="flex items-center gap-6">
         <Link href="/">
           <h1 className="text-3xl font-semibold">
-            Blog <span className="text-blue-500">Khaseeb</span>
+            Blog <span className="text-blue-500">Nebula</span>
           </h1>
         </Link>
-        <div className="sm:flex items-center hidden gap-6">
-          <Link
-            href="/"
-            className="text-sm font-medium hover:text-blue-500 transition-colors"
-          >
-            Home
-          </Link>
-          <Link
-            href="/dashboard"
-            className="text-sm font-medium hover:text-blue-500 transition-colors"
-          >
-            Dashboard
-          </Link>
-        </div>
+      </div>
+      <div className="sm:flex items-center hidden gap-6">
+        <Link
+          href="/"
+          className="text-sm font-medium hover:text-blue-500 transition-colors"
+        >
+          Home
+        </Link>
+        <Link
+          href="/dashboard"
+          className="text-sm font-medium hover:text-blue-500 transition-colors"
+        >
+          Dashboard
+        </Link>
       </div>
       {user ? (
         <div className="flex items-center gap-4">
