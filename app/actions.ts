@@ -2,6 +2,7 @@
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { prisma } from "./utils/db";
 import { redirect } from "next/navigation";
+import { revalidatePath } from "next/cache";
 
 export const handleSubmission = async (formData: FormData) => {
   // get the values from the inputs using name property
@@ -27,6 +28,8 @@ export const handleSubmission = async (formData: FormData) => {
       authorImage: user.picture as string,
     },
   });
+
+  revalidatePath("/");
 
   return redirect("/dashboard");
 };
