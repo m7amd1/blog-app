@@ -1,13 +1,20 @@
-import Link from "next/link"
+import Link from "next/link";
 
 const NotFoundPage = () => {
-return (
-    <div className="flex items-center px-4 py-3 sm:px-6 md:px-8 lg:px-12 xl:px-16" style={{minHeight: "calc(100vh - 76px)"
-    }}>
+  return (
+    <div
+      className="flex items-center px-4 py-3 sm:px-6 md:px-8 lg:px-12 xl:px-16"
+      style={{ minHeight: "calc(100vh - 76px)" }}
+    >
       <div className="w-full space-y-6 text-center">
         <div className="space-y-3">
-          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl animate-bounce">404</h1>
-          <p className="text-gray-500">Looks like you&apos;ve ventured into the unknown digital realm.</p>
+          <h1 className="text-4xl font-bold tracking-tighter sm:text-5xl animate-bounce">
+            404
+          </h1>
+          <p className="text-gray-500">
+            Sorry, we couldn&apos;t find the page you&apos;re looking for.
+            Please check the URL or navigate back home.
+          </p>
         </div>
         <Link
           href="/"
@@ -18,6 +25,6 @@ return (
         </Link>
       </div>
     </div>
-  )
-}
-export default NotFoundPage
+  );
+};
+export default NotFoundPage;

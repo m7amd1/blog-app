@@ -17,7 +17,7 @@ const Navbar = async () => {
       <div className="flex items-center gap-6">
         <Link href="/">
           <h1 className="text-3xl font-semibold">
-            Blog <span className="text-blue-500">Nebula</span>
+            Blog<span className="text-blue-500">Nebula</span>
           </h1>
         </Link>
       </div>
