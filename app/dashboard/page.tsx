@@ -21,7 +21,15 @@ const Dashboard = async () => {
   const { getUser } = getKindeServerSession();
   const user = await getUser();
 
-  const data = await getData(user?.id);
+  if (!user?.id) {
+    return (
+      <div className="mt-6">
+        <h2 className="text-xl font-medium">You must be logged in to view your blog articles.</h2>
+      </div>
+    );
+  }
+
+  const data = await getData(user.id);
 
   return (
     <div className="mt-6">
