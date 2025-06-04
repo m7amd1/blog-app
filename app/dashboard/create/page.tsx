@@ -1,3 +1,5 @@
+import { handleSubmission } from "@/app/actions";
+import { Button } from "@/components/ui/button";
 import {
   Card,
   CardContent,
@@ -12,7 +14,7 @@ import { Textarea } from "@/components/ui/textarea";
 const CreateBlog = () => {
   return (
     <div>
-      <Card>
+      <Card className="max-w-lg mx-auto">
         <CardHeader>
           <CardTitle>Create Post</CardTitle>
           <CardDescription>
@@ -20,19 +22,25 @@ const CreateBlog = () => {
           </CardDescription>
         </CardHeader>
         <CardContent>
-          <form>
+          <form className="flex flex-col gap-4" action={handleSubmission}>
             <div className="flex flex-col gap-2">
               <Label>Title</Label>
-              <Input />
+              <Input type="text" name="title" placeholder="Title" required />
             </div>
-            <div className="flex flex-col gap-2 my-3">
+            <div className="flex flex-col gap-2">
               <Label>Content</Label>
-              <Textarea></Textarea>
+              <Textarea
+                className="resize-none"
+                name="content"
+                placeholder="Content"
+                required
+              ></Textarea>
             </div>
             <div className="flex flex-col gap-2">
               <Label>Image URL</Label>
-              <Input />
+              <Input type="text" name="imageUrl" placeholder="Image Url" required />
             </div>
+            <Button className="cursor-pointer">Create Post</Button>
           </form>
         </CardContent>
       </Card>
