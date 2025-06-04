@@ -1,5 +1,5 @@
 import { handleSubmission } from "@/app/actions";
-import { Button } from "@/components/ui/button";
+import SubmitButton from "@/components/SubmitButton";
 import {
   Card,
   CardContent,
@@ -38,9 +38,14 @@ const CreateBlog = () => {
             </div>
             <div className="flex flex-col gap-2">
               <Label>Image URL</Label>
-              <Input type="text" name="imageUrl" placeholder="Image Url" required />
+              <Input
+                type="text"
+                name="imageUrl"
+                placeholder="Image Url"
+                required
+              />
             </div>
-            <Button className="cursor-pointer">Create Post</Button>
+            <SubmitButton />
           </form>
         </CardContent>
       </Card>
