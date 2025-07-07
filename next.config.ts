@@ -5,13 +5,8 @@ const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
-        hostname: "www.salesforce.com",
         protocol: "https",
-        port: "",
-      },
-      {
-        hostname: "lh3.googleusercontent.com",
-        protocol: "https",
+        hostname: "**",
         port: "",
       },
     ],
